@@ -1,0 +1,43 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  gap: 5rem;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.value {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1300px) {
+  .board {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .board {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .board {
+    gap: 1rem;
+  }
+}

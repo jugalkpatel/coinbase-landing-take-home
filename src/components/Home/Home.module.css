@@ -1,0 +1,102 @@
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto minmax(90vh, max-content) auto;
+}
+
+.bgBlue {
+  background: linear-gradient(to right, rgb(63, 81, 181), rgb(100, 181, 246))
+    rgb(255, 255, 255);
+  display: grid;
+  justify-content: center;
+  align-content: start;
+  padding: 7rem;
+  padding-bottom: 12rem;
+}
+
+.bgWhite {
+  background-color: var(--white);
+  position: relative;
+  display: grid;
+  justify-content: center;
+}
+
+.overlay {
+  grid-template-rows: auto 100px;
+  position: absolute;
+  top: -10rem;
+  display: grid;
+  max-width: 1127px;
+  width: 100%;
+  place-items: center;
+  justify-self: center;
+  padding-bottom: 2rem;
+  background-color: var(--white);
+  min-height: 100vh;
+  border-radius: 0.5rem;
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 15px -3px;
+  width: 100%;
+  height: 100%;
+}
+
+.table {
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  width: 100%;
+}
+
+.footer {
+  height: 10vh;
+  background: linear-gradient(to right, rgb(63, 81, 181), rgb(100, 181, 246));
+}
+
+.loader {
+  color: var(--greenbg);
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 0.7rem;
+}
+
+.errorMessage {
+  opacity: 0.3;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .table {
+    font-size: 14px;
+  }
+
+  .overlay {
+    max-width: 933px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .table {
+    font-size: 12px;
+  }
+  .overlay {
+    max-width: 723px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .table {
+    font-size: 11px;
+  }
+
+  .overlay {
+    max-width: 100%;
+  }
+}

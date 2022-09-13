@@ -1,39 +1,67 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato";
+}
+
+:root {
+  --greenbg: rgb(24, 198, 131);
+  --redbg: rgb(244, 67, 54);
+  --white: #fff;
+}
+
+.colGrid {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1em;
+}
+
+.commonPadding {
+  padding: 1em;
+}
+
+.commonBorder {
+  border-bottom: 1px solid rgba(34, 36, 38, 0.1);
+}
+
+.center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.left {
+  text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.right {
+  text-align: right;
 }
 
-.App-header {
-  min-height: 100vh;
+.green {
+  color: var(--greenbg);
+}
+
+.red {
+  color: var(--redbg);
+}
+
+.btn {
+  margin: 1rem;
+  background-color: var(--greenbg);
+  box-shadow: rgb(0 0 0 / 40%) 0px 2px 15px -3px;
+  color: var(--white);
+  border-radius: 10rem;
+  padding: 0.7rem 1.5rem;
+  border: 0;
+  font-weight: 700;
+  cursor: pointer;
+  align-self: center;
+}
+
+.align {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-.App-link {
-  color: rgb(112, 76, 182);
-}
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
 }
