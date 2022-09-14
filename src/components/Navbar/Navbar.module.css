@@ -58,8 +58,17 @@
     display: none;
   }
 
-  .item:last-child,
-  .item:nth-last-child(2) {
+  .left {
     display: none;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .navbar {
+    padding: 0.3em 0.5em;
+    font-size: 11px;
+  }
+  .right {
+    font-size: 11px;
   }
 }

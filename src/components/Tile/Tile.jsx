@@ -4,7 +4,7 @@ import { formatCurrency } from "../../utils";
 
 function Name({ img, symbol, name }) {
   return (
-    <td className={`commonPadding ${styles.name}`}>
+    <td className={`commonPadding ${styles.dataCell} ${styles.name}`}>
       <img src={img} alt="logo" width="30" height="30" />
       <article className={styles.col}>
         <span className={styles.name}>{name}</span>
@@ -33,24 +33,26 @@ function Tile({
   const percentColor = percent > 1 ? "green" : "red";
   return (
     <tr className={`colGrid commonBorder`}>
-      <td className={`commonPadding right align`}>{rank}</td>
+      <td className={`commonPadding right align ${styles.dataCell}`}>{rank}</td>
       <Name img={img} symbol={symbol} name={name} />
-      <td className={`commonPadding right align`}>
+      <td className={`commonPadding right align ${styles.dataCell}`}>
         ${parseFloat(priceUsd).toFixed(2)}
       </td>
-      <td className={`commonPadding right align`}>
+      <td className={`commonPadding right align ${styles.dataCell}`}>
         ${formatCurrency(Number(marketCapUsd))}
       </td>
-      <td className={`commonPadding right align`}>
+      <td className={`commonPadding right align ${styles.dataCell}`}>
         ${Number(vwap24Hr).toFixed(2)}
       </td>
-      <td className={`commonPadding right align`}>
+      <td className={`commonPadding right align ${styles.dataCell}`}>
         {formatCurrency(Number(supply))}
       </td>
-      <td className={`commonPadding right align`}>
+      <td className={`commonPadding right align ${styles.dataCell}`}>
         ${formatCurrency(Number(volumeUsd24Hr))}
       </td>
-      <td className={`commonPadding right align ${percentColor}`}>
+      <td
+        className={`commonPadding right align ${percentColor} ${styles.dataCell}`}
+      >
         {percent}%
       </td>
     </tr>

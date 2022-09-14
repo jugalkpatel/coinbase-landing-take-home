@@ -48,12 +48,12 @@
 }
 
 .btn {
-  margin: 1rem;
+  margin: 1em;
   background-color: var(--greenbg);
   box-shadow: rgb(0 0 0 / 40%) 0px 2px 15px -3px;
   color: var(--white);
-  border-radius: 10rem;
-  padding: 0.7rem 1.5rem;
+  border-radius: 10em;
+  padding: 0.7em 1.5em;
   border: 0;
   font-weight: 700;
   cursor: pointer;
@@ -64,4 +64,14 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+@media screen and (max-width: 615px) {
+  .colGrid {
+    grid-template-columns: 0.5fr 2fr repeat(2, 1fr);
+  }
+
+  .btn {
+    font-size: 1em;
+  }
 }

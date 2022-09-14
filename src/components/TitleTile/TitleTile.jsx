@@ -18,13 +18,12 @@ function TitleTile() {
         {columns.map((title) => {
           const textAlign =
             title === "Rank" ? "center" : title === "Name" ? "left" : "right";
-          const align = title !== "Name" ? "align" : null;
+          const align = title !== "Name" ? "align" : styles.name;
           return (
             <th
               key={title}
               className={`commonPadding ${align} ${textAlign} ${styles.title}`}
             >
-              {/* <th className={`${align} ${styles.title}`}>{title}</th> */}
               {title}
             </th>
           );

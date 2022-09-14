@@ -5,3 +5,22 @@
 
   font-weight: 500;
 }
+
+.name {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 615px) {
+  .title {
+    display: none;
+  }
+
+  .title:nth-child(-n + 3) {
+    display: block;
+  }
+
+  .title:last-child {
+    display: block;
+  }
+}
